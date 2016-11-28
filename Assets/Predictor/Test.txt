@@ -1,0 +1,7 @@
+elephant
+pineapple
+bow
+sword
+book
+chair
+horse
