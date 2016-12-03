@@ -18,18 +18,22 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class NextPage : MonoBehaviour {
+public class NextPage : MonoBehaviour
+{
 	public Button NextPageButton;
 
-	void Start () {
-		Button btn = NextPageButton.GetComponent<Button>();
-		btn.onClick.AddListener(TaskOnClick);
+	void Start ()
+	{
+		Button btn = NextPageButton.GetComponent<Button> ();
+		btn.onClick.AddListener (TaskOnClick);
 	}
 
-	void TaskOnClick(){
+	void TaskOnClick ()
+	{
 		Debug.Log ("You have clicked the button!");
-		//SceneManager.LoadScene (2, LoadSceneMode.Additive);
+		Application.CaptureScreenshot ("TestScreenshot.png");
 
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 	}
 }
